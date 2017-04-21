@@ -1,0 +1,7 @@
+---
+  - hosts: all:!control 
+    become: true
+    tasks:
+      - name: poweroff all servers
+        command: poweroff
+

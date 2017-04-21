@@ -1,0 +1,12 @@
+[loadbalancer]
+ans-lb.
+
+[webserver]
+ans-app1.
+ans-app2.
+
+[database]
+ans-db.
+
+[control]
+ansible. ansible_connection=local
