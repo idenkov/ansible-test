@@ -4,4 +4,8 @@
     tasks:
       - name: Upgrade packages
         apt: 
-          upgrade: full 
+          upgrade: full
+#You might not want to have this on production
+      - name: Clean packages
+        apt:
+          autoremove: yes
