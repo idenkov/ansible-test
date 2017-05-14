@@ -2,7 +2,8 @@
 - hosts: control
   become: true
   tasks:
-    - name: inastall control node tools
+    - name: install control node tools
       apt: name={{item}} state=present update_cache=yes
       with_items:
        - curl
+       - python-httplib2
