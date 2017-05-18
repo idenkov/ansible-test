@@ -1,0 +1,5 @@
+---
+- hosts: ans-db.
+  become: true
+  roles:
+    - mysql
