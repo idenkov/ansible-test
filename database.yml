@@ -1,5 +1,6 @@
 ---
 - hosts: ans-db.
   become: true
+  #Passing variables with the role
   roles:
-    - mysql
+    - { role: mysql, db_name: demo, db_user_name: demo, db_user_pass: demo, db_user_host: '%' }
