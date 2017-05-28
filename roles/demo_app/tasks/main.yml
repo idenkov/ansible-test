@@ -6,8 +6,8 @@
     - python-virtualenv
     - python-mysqldb
 
-- name: copy demo app
-  copy: src=demo/app dest=/var/www/demo mode=0755
+- name: copy demo.wsgi
+  template: src=demo.wsgi.j2 dest=/var/www/demo/demo.wsgi mode=0755
   notify: restart apache2
 
 - name: copy app config for apache2
